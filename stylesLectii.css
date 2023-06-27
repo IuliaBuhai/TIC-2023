@@ -1,0 +1,103 @@
+	background{
+		text-align: center; background-color: #090910;color:rgb(181, 181, 181)
+	}
+	p{
+	text-align: center;
+	font-size: 30px;
+}
+	img{
+	width: 80%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+	h2{
+	text-align: center;
+}
+
+	fieldset{
+	border: 5px double;
+	border-color: white;
+	box-shadow: 3px 3px 2px #2F4F4F;
+	border-radius: 50px;
+	background-color: #111F37;
+	color: #CDD9EF;
+}
+	.menu{
+	text-align: center;
+	display: block;
+}
+	.menu a{
+	color: #1A2E52;
+	background-color: #4682B4;
+	text-decoration: none;
+	text-align: center;
+	border: 1px solid #1A2E52;
+	border-radius: 15px;
+	font-size: 20px;
+}
+
+	.menu a:hover{
+	color: #4682B4;
+	background-color: #1A2E52;
+}
+
+.box{
+	float: left;
+
+}
+	.box a{
+	color: white;
+	text-decoration: none;
+	transition: transform .5s;
+	font-size: 30px;
+	border: 3px solid white;
+	background-color: #001a33;
+}
+
+	.box a:hover{
+	background-color: white;
+	color: #001a33;
+	transform: scale(2);
+	border: 5px solid #001a33;
+}
+
+.box1{
+	text-align: center;
+
+}
+	.box1 a{
+	color: white;
+	text-decoration: none;
+	transition: transform .5s;
+	font-size: 30px;
+	border: 3px solid white;
+	background-color: #001a33;
+}
+
+	.box1 a:hover{
+	background-color: white;
+	color: #001a33;
+	transform: scale(2);
+	border: 5px solid #001a33;
+}
+
+.inapoiSus{
+	display:block;
+	position: fixed;
+	top:60vh;
+	left: 0px;	
+	box-shadow: 2px 2px 2px black;
+	border-radius: 20px;
+}
+
+.inapoiSus a{
+	text-decoration: none
+}
+
+.inapoiSus img{
+	width: 80px;
+	height: 80px;
+	float: left;
+	border-radius: 20px;
+}

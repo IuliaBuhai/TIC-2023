@@ -1,0 +1,134 @@
+
+    body{
+    background-color: rgb(0, 0, 0);
+ }
+    a{
+        text-decoration:none;
+    }
+    .pc{/*img fundal*/
+        background-image: url("fundal1.png");
+        width: 100%;
+        height: 25vh;
+        background-repeat: no-repeat; 
+        background-size: cover;
+    
+        z-index: 2;
+        position: fixed;
+        top: 5px;
+    }
+
+    .bar{/*bara navigatie*/
+        display: inline-block;
+        z-index: 3;
+        background-color: #090c13;
+        width: 100%;
+        position:fixed;
+        background-position: center;
+        margin-top: 10px;
+        opacity: 1 !important;
+        top: 100px;
+    }
+    .bar a{
+        color: white;
+        background-color: #090910;
+        text-decoration: none;
+        display: inline-block;
+        transition: transform .5s;
+        height: 100%;
+    }
+    li{
+        display: inline;
+        float: left;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .dropbtn{
+	color: white;
+	border: none;
+	background-color: #090910;
+	padding: 1px;
+	text-align: left;
+	text-decoration: none;
+	transition: transform .2s;	
+	z-index: 2;
+}
+	.dropdown{
+	position: relative;
+	display: inline-block;
+}
+	.dropdown-content{
+	display: none;
+	position: absolute;
+	z-index: 1;
+	padding-bottom: 10px;
+}
+	.dropdown-content a{
+	color: white;
+	border: none;
+	background-color: #090910;
+	padding: 1px;
+	font-size: 15px;
+	text-align: left;
+	text-decoration: none;
+	display: block;
+	transition: transform .2s;
+}
+	.dropdown-content a:hover{
+	color: #090910;
+	background-color: white;
+	transform: scale(1.5);
+}
+	.dropdown:hover .dropdown-content{
+	display: block;	
+}
+	.dropdown:hover .dropbtn{
+	color: #090910;
+	background-color: white;
+	transform: scale(1.5);
+}
+    #myIframe{
+        z-index: 1;
+        width:100%;
+        height: 100vh; 
+        margin-top:20vh;
+        border:none;
+    }
+   .visualBetterGray{
+        position: fixed;
+        z-index: 4;
+        top: 20vh;
+        right:0px;
+        display: block;
+    }
+
+    .visualBetterGray img{
+        height: 60px;
+        border-radius: 10px;
+    }
+
+    .visualBetterInverted{
+        position: fixed;
+        z-index: 4;
+        top: 30vh;
+        right:0px;
+        display: block;
+    }
+
+    .visualBetterInverted img{
+        height: 60px;
+        border-radius: 10px;
+    }
+
+    .visualBetterBrightness{
+        position: fixed;
+        z-index: 4;
+        top: 40vh;
+        right:0px;
+        display: block;
+    }
+
+    .visualBetterBrightness img{
+        height: 60px;
+        border-radius: 10px;
+    }
