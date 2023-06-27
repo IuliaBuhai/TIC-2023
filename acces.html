@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="stylesLectii.css">
+        <style>
+        
+iframe{
+            width: 80%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 100vh;
+}
+    .BorderImages img{
+        border: 5px solid #2F4F4F;
+        margin-bottom: 10px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 5px 7px 5px #00001a;
+    }
+
+    .FormatareCod{
+        display: inline-block; 
+        text-align: left;
+        background-color:#7d98ad;
+        color:#00001a;
+    }
+        </style>
+    </head>
+    <body style="background-color: #090910;color:white">
+        <div class="inapoiSus">
+            <a href ="#sus"><img src="sus.png"></a>
+        </div>
+        <h5 id="sus">Pentru a deschide in alta fila: </h5><div class="box"><a href="acces.html" target="blank">Aici</a></div>
+        <br>
+        <h1 style="text-align: center;">Acces</h1>
+
+        <div class="menu">
+            <a href="#scurt">Scurta prezentare interfata</a><br><br>
+            <a href="#ImportDate">Import date</a><br><br>
+            <a href="#ExportDate">Export Date</a><br><br>
+            <a href="#viz">Vizualizarea tabelului</a><br><br>
+            <a href="#int">Interogari</a><br><br>
+            <a href="#Relatii">Relatii intre tabele</a><br><br>
+            <a href="#formulare">Formulare</a><br><br>
+            <a href="#raport">Rapoarte</a><br><br>
+            <a href="#macro">Macrocomenzi</a>
+        </div>
+
+        <fieldset id="scurt">
+            <legend><h1>Scurta prezentare interfata</h1></legend>
+            <img src="Acces/pornire.png">
+            <p>La apasarea tastei ALT ni se vor afisa toate comenzile rapide</p>
+            <img src="Acces/alt.png">
+            <p>Din fila creare putem crea tablele, interogari(queries), rapoarte, formulare etc.</p>
+            <img src="Acces/creare.png">
+            <p>Din aceasta fila putem importa date care ne vor ajuta sa populam tabelul/tabelele</p>
+            <img src="Acces/dext.png">
+            <p>Aici avem fila cu instrumente care ne sunt de folos </p>
+            <img src="Acces/instrumente.png">
+            <p>Fila ajutor</p>
+            <img src="Acces/ajutor.png">
+            <p>Aceasta fila secundara apare atunci cand manipulam un tabel, ne poate usura munca si accesul la anumite functii</p>
+            <img src="Acces/tabel.png">
+        </fieldset>
+
+        <fieldset id="ImportDate">
+            <legend><h1>Import date</h1></legend>
+            <iframe src="Acces/import_date.pdf"></iframe>
+            <p>Acest exemplu arata un exemplu in care importam dintr-un fisier excel(.xlsx), dar exista mai multe posibilitati de a importa</p>
+            <div class="BorderImages">
+            <img src="Acces/1.jpg">
+            <img src="Acces/2.jpg">
+            <img src="Acces/3.jpg">
+            <img src="Acces/4.jpg">
+            </div>
+        </fieldset>
+
+        <fieldset id="ExportDate">
+            <legend><h1>Export date</h1></legend>
+            <iframe src="Acces/export_date.pdf"></iframe>
+            <p>Acest exemplu arata un exemplu in care exportam intr-un fisier excel(.xlsx), dar exista mai multe posibilitati de a exporta</p>
+            <img src="Acces/BorderImagesiuni.jpg">
+        </fieldset>
+        <fieldset id="viz">
+            <legend><h1>Vizualizarea tabelelor </h1></legend>
+            <ul>
+                <h2>Exista 2 moduri de a vizualiza un tabel:</h2>
+                <li>Vizualizare <b>foaie de date</b></li>
+                <div class="BorderImages"><img src="Acces/viz2.jpg"></div>
+                <li>Vizualizare <b>proiect</b></li>
+                <div class="BorderImages"><img src="Acces/viz1.jpg"></div>
+            </ul>
+            <p>In vizualizarea <i><b>foaie de date</b></i> putem vizualiza produsul final, pe cand in vizualizarea <i><b>proiect</b></i> putem observa si modifica diferite aspecte ce tin de datele din tabelul notru</p>
+        </fieldset>
+
+        <fieldset id="int">
+            <legend><h1>Interogari</h1></legend>
+            <div class="BorderImages">
+            <img src="Acces/int1.jpg">
+            <img src="Acces/int2.jpg">
+            <p>Creare interogare simpla cu ajutorul expertului</p>
+            <iframe src="Acces/interogare_cu_expert.pdf"></iframe>
+            <p>Proiectare interogare</p>
+            <iframe src="Acces/proiectare_interogare.pdf"></iframe>
+            <p>Interogare folosind SQL</p>
+            <p>Pentru aceasta metoda este necesar sa stim limbajul de programare SQL, care este foarte usor de invatat </p>
+            <p>Aici avem o structura simpla de limbaj prin care extragem Numele, Prenumele si Nr.Crt.</p>
+            <iframe src="Acces/sql.pdf"></iframe>
+            <p>Aici avem codul folosit:</p>
+            <div class="FormatareCod">
+            <p>SELECT Date.[Nr Crt], Date.Nume, Date.Prenume</p>
+            <p>FROM [Date];</p>
+            </div>   
+            </div>
+            <p>Lista coduri aici:<div class="box"><a href="https://www.sqltutorial.org/wp-content/uploads/2016/04/SQL-cheat-sheet.pdf" style="text-align: center;">Aici</a></div></p>
+           <br><br><p>Sursa: https://www.sqltutorial.org/sql-cheat-sheet/</p>
+        </fieldset>
+        <fieldset id="Relatii">
+            <legend><h1>Relatii intre tabele</h1></legend>
+            <iframe src="Acces/relatii.pdf"></iframe>
+            <p>Tipuri de asociere:</p>
+            <img src="Acces/prop.jpg">
+        </fieldset>
+        <fieldset id="formulare">
+            <legend><h2>Formulare</h2></legend>
+            <p>Mai jos avem un scurt tutorial unde se va prezenta cum se poate realiza un formular care ne trece prin toate înregistrările</p>
+            <iframe src="Acces/formular.pdf" frameborder="0"></iframe>
+        </fieldset>
+        <fieldset id="raport">
+                <legend><h2>Rapoarte</h2></legend>
+                <p>Un raport simplu:</p>
+                <iframe src="Acces/raport.pdf" frameborder="0"></iframe>
+        </fieldset>
+        <fieldset id="macro">
+            <legend><h2>Macrocomenzi</h2></legend>
+            <p>O macrocomandă simplă:</p>
+            <iframe src="Acces/realizaremacrocomanda.pdf" frameborder="0"></iframe>
+        </fieldset>
+    </body>
+</html>

@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Lectii HTML</title>
+<style>
+
+	pre {
+  	font-family: Consolas,"courier new";
+ 	 color: #aaaabd;
+  	background-color: #0f0e13;
+  	padding: 2px;
+  	font-size: 105%;
+	display:inline-block;
+}
+	.box{
+	float: left;
+
+}
+	.box a{
+	color: white;
+	text-decoration: none;
+	transition: transform .5s;
+	font-size: 30px;
+	border: 3px solid white;
+	background-color: #001a33;
+}
+
+	.box a:hover{
+	background-color: white;
+	color: #001a33;
+	transform: scale(2);
+	border: 5px solid #001a33;
+}
+
+	.menu{
+	text-align: center;
+	display: block;
+}
+	.menu a{
+	color: #1A2E52;
+	background-color: #4682B4;
+	text-decoration: none;
+	text-align: center;
+	border: 1px solid #1A2E52;
+	border-radius: 15px;
+	font-size: 20px;
+}
+
+	.menu a:hover{
+	color: #4682B4;
+	background-color: #1A2E52;
+}
+.inapoiSus{
+	display:block;
+	position: fixed;
+	top:60vh;
+	left: 0px;
+	box-shadow: 2px 2px 2px black;
+	border-radius: 20px;
+}
+
+.inapoiSus a{
+	text-decoration: none
+}
+
+.inapoiSus img{
+	width: 80px;
+	height: 80px;
+	float: left;
+	border-radius: 20px;
+}
+
+	fieldset{
+		border-color: white; box-shadow: 3px 3px 2px #172949;
+
+	}
+</style>
+</head>
+<body style="background-color: #090910;color: white;">
+	<div class="inapoiSus">
+		<a href ="#sus"><img src="sus.png"></a>
+	</div>
+<p id="sus">Pentru a deschide in alta fila: <div class="box"><a href="html.html" target="blank">Aici</a></div></p>
+<hr color="#000080">
+<br>
+<h1 style="text-align: center">HTML</h1>
+
+<div class="menu">
+<h2> Cuprins</h2>
+<p><a href="#Ce"> Ce este HTML</a></p>
+<p><a href="#link">Link-uri</a></p>
+<p><a href="#notiuni"> Notiuni de baza</a></p>
+<p><a href="#editare">Editare text</a></p>
+<p><a href="#img">Imagini</a></p>
+<p><a href="#video">Video</a></p>
+<p><a href="#tabele">Tabele</a></p>
+<p><a href="#css">CSS</a></p>
+<p><a href="#claseSiIdUri">Clase si id-uri</a></p>
+<p><a href="#formulare">Formulare</a></p>
+<p><a href="#e1"> Exemplu 1</a></p>
+<p><a href="#e2"> Exemplu 2</a></p>
+</div>
+
+<fieldset   id="Ce">
+
+<legend><h2> Ce este HTML?</h2></legend>
+
+
+<p>HyperText Markup Language (HTML) este un limbaj de marcare utilizat pentru crearea paginilor web ce pot fi afișate într-un browser (sau navigator). Scopul HTML este mai degrabă prezentarea informațiilor – paragrafe, fonturi, tabele ș.a.m.d. – decât descrierea semanticii ,documentului. În cadrul dezvoltării web de tip front-end, HTML este utilizat împreună cu CSS și JavaScript.</p>
+<p>Specificațiile HTML sunt dictate de World Wide Web Consortium (W3C), care încurajează utilizarea CSS în locul a HTML explicit pentru prezentare.</p>
+</fieldset>
+
+<fieldset   id="notiuni">
+
+<legend> <h2>Notiuni de baza</h2></legend>
+
+
+<p> HTML este prescurtarea de la Hyper Text Mark-up Language si este codul care sta la baza paginilor web.</p>
+
+<p>Paginile HTML sunt formate din etichete sau tag-uri și au extensia „.html” sau „.htm”. În marea lor majoritate aceste etichete sunt pereche, una de deschidere <eticheta> și alta de închidere </eticheta>, mai există și cazuri în care nu se închid, atunci se folosește <eticheta />. Navigatorul web interpretează aceste etichete afișând rezultatul pe ecran. HTML-ul este un limbaj care nu face deosebire între litere majuscule și minuscule.
+
+<p>Pagina principala a unui domeniu este fisierul „index.html” respectiv „index.htm”. Această pagină este setată a fi afișată automat la vizitarea unui domeniu.</p>
+
+<p>De exemplu la vizitarea domeniului www.nume.ro este afișată pagina www.nume.ro/index.html.</p>
+
+<p>Unele etichete permit utilizarea de atribute care pot avea anumite valori:</p>
+ <pre>&lt;eticheta atribut="valoare"&gt; ... &lt;/eticheta&gt;</pre>
+<p><ul>Componența unui document HTML este:
+
+<li>versiunea HTML a documentului</li>
+<li>zona head cu etichetele <pre>&lt;head&gt; &lt;/head&gt;</pre> </li>
+<li>zona body cu etichetele <pre>&lt;body&gt; &lt;/body&gt; </pre>sau <pre>&lt;frameset&gt; &lt;/frameset&gt;</pre></li></ul></p>
+<p><ul>Versiunea HTML poate fi:
+
+<li>HTML 4.01 Strict
+<pre>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</pre></li>
+<li>HTML 4.01 Transitional
+<pre>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</pre></li>
+<li>HTML 4.01 Frameset
+<pre>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd"&gt; </pre></li>
+<li>HTML 5
+<pre>&lt;!DOCTYPE HTML&gt;</pre></li>
+</ul></p>
+Toate paginile HTML încep și se termină cu etichetele<pre> &lt;html&gt; și &lt;/html&gt.</pre>
+
+În interiorul acestor etichete găsim perechile <pre>&lt;head&gt; &lt;/head&gt;</pre> și <body>, </body>.
+
+head conține titlul paginii între etichetele<pre> &lt;title&gt</pre> și <pre>&lt;/title&gt;</pre>, descrieri de tip <pre>&lt;meta&gt;</pre>, stiluri pentru formatarea textului, script-uri și legături către fisiere externe (de exemplu script-uri, fișiere de tip CSS sau favicon).</p>
+
+<p>Etichetele de tip meta conțin cuvinte cheie, descrierea paginii, date despre autor, informații utile motoarelor de căutare și au următorul format:</p>
+
+<pre>&lt;META NAME="nume" CONTENT="continut"</pre>
+<p>Exemplu: link către un fisier extern CSS:</p>
+
+<p><pre>%lt;link rel="stylesheet" type="text/css" href="css.css"&gt;</pre>
+body găzduiește practic toate etichetele afișate de browser pe ecran.</p>
+
+<p>Exemplu: o pagină HTML cu titlul Exemplu iar conținutul <i>Conținut pagină</i></p>
+
+<pre>&lt;html>
+&lt;head>
+&lt;title>Exemplu&lt;/title>
+&lt;/head>
+&lt;body>
+<i>Conținut pagină</i>
+&lt;/body>
+&lt;/html></pre>
+<p>Și în HTML poate fi introdus un comentariu, care bineînțeles nu va fi afișat de browser:
+<pre>&lt;!-- comentariu --><pre></p>
+</fieldset>
+
+<!-- Lectii**********************************************************************************  -->
+
+<fieldset   id="editare">
+<legend><h2>Formtare text</h2></legend>
+<dl>Un font este caracterizat de următoarele atribute:
+
+		<dt><b>culoare </b>(stabilita prin atributul color);</dt>
+			<dd>-O culoare poate fi precizata în două moduri:
+					<ul>
+						<li>printr-un nume de culoare.</li>
+						<li>printr-o constantă conform standardului de culoare RGB (Red, Green, Blue). O astfel de constantă se formează astfel: #rrggbb, unde r, g și b sunt cifre hexazecimale.</li></ul></dd>
+		<dt><b>tipul sau stilul</b> (stabilit prin atributul face);</dt>
+		<dt><b>mărimea </b>(definita prin atributul size);</dt>
+		<dt><b>mărimea în puncte tipografice</b> (stabilita prin atributul point-size);</dd>
+		<dt><b>grosime </b>(definita prin atributul weight).</dt>
+Toate aceste atribute aparțin etichetei &ltfont>, care permite inserarea de blocuri de texte personalizate.</dl>
+<hr color="#172949">
+<h2>Exemplu:</h2>
+	<pre><p>&lt; p style="color: #172949; font-size: 30px; font-weight: 10px;">Hello World&lt;/p></pre>
+	<p style="color: #172949; font-size: 30px; font-weight: 10px;">Hello World</p>
+</fieldset >
+
+<fieldset   id="img">
+
+<legend><h2>Imagini</h2></legend>
+<p>Pentru a introduce o imagine intr-un format HTML se foloseste elementul <pre>&lt;img> ... &lt;/img> </pre>impreuna cu urmatoarele atribute :
+
+                    <ul><li>  <b> src</b>   - Valoarea acestui atribut determina locatia fisierului care contine imaginea.</li>
+
+                     <li><b> alt </b>  -La acest atribut se scrie textul care va aparea daca imaginea nu e afisata (de unele browsere) sau cand utilizatorul va pozitiona, in browser, mouse-ul peste imagine.</li>
+
+                     <li><b> align </b>   -Acest atribut permite asezarea imagini in locuri diferite pe pagina. Pot fi folosite urmatoarele optiuni:
+
+                                            <ol><li>Bottom , </li><li>Middle , </li><li>Top , </li><li>Left , </li><li>Right ,</li> <li>TextTop , </li><li>ABSMiddle , </li><li>Baseline , </li><li>ABSBottom</li></li></ol>
+
+                     <li> <b>width</b>  -Valoarea acestui atribut reprezinta lungimea imaginii, in pixeli. Daca nu este scris imaginea va fi prezentata cu lungimea originala.</li>
+
+                     <li><b> height</b>  -Valoarea acestui atribut reprezinta inaltimea (latimea) imaginii, in pixeli. Daca nu este scris imaginea va fi prezentata cu inaltimea originala.</li>
+
+                     <li><b> border </b>  - Prin adaugarea acestui atribut imaginea va aparea inconjurata de un chenar, valoarea acestui atribut reprezinta grosimea chenarului, in pixeli.</li>
+
+                     <li> <b>hspace  </b> - Acest atribut este pentru spatiu orizontal pe ambele parti ale imaginii, specificat in pixeli. De exemplu o valoare de 5 va pune un spatiu invizibil, de 5 pixel, in partile orizontale ale imaginii.</li>
+
+                     -<li><b> vspace </b>  - Acest atribut este pentru spatiu vertical pe ambele parti ale imaginii, specificat in pixeli. De exemplu o valoare de 5 va pune un spatiu invizibil, de 5 pixel, in partile verticale ale imaginii.</li></p>
+<hr color="#090910;">
+<h2>Exemplu:</h2>
+</fieldset>
+
+
+
+<fieldset   id="link">
+	<legend> <h2>Link-uri</h2></legend>
+	<p>Link-urile (links) sunt elemente HTML cu ajutorul carora putem deschide alte pagini, sari de la un document la altul sau la alt site. Sunt foarte importante in crearea de pagini web.</p>
+	<p>Forma generala pentru crearea unui link este urmatoarea:<p>
+		
+		<pre>&lt;a href="url" title="Titlu link">Nume&lt;/a></pre>
+		
+		<ul><li><b> a </b> este elementul specific pentru crearea link-urilor</li>
+			<li><b> href</b> este atributul care marcheaza indicarea adresei link-ului</li>
+			<li><b> url</b> este adresa link-ului (a paginii care va fi deschisa).</li>
+			<li><b> title</b> este atributul prin care se da un titlu link-ului (un text ascuns, care apare numai cand este pozitionat mouse-ul deasupra link-ului)</li>
+			<li><b> Titlu link </b>este textul ascuns care apare cand este pozitionat mouse-ul deasupra link-ului</li>
+			<li><b> Nume </b>este textul care va aparea in browser si pe care trebuie dat click cu mouse-ul. In loc de acest text se poate folosi si o imagine, astfel "Nume" va fi inlocuit cu <pre>&lt;img src="poza"></pre><ul></li>
+			</p>
+			<hr color="#172949">
+			<h2>Exemplu:</h2>
+			<a href="index.html"><img src="sigla.png" style="width:50%;"></a>
+			<p><mark>Click pe poza</mark></p>
+			<p>Cod:<pre>&lta href="index.html">&ltimg src="sigla.png">&lt/a></pre></p>
+		</fieldset>
+		
+<fieldset id="video">
+	<legend><h2>Video</h2></legend>
+	<p>Un exemplu de cod:</p>
+	<pre>&ltvideo width="x" height="y" controls/autoplay/muted>
+		%ltsource src="video" type="tipMedia">
+		Aici se adaugă textul care va apărea in ca că videoclipul nu se poate reda
+		&alt/video></pre>
+		<p> <i>controls/ autoplay/ muted</i> se pot utiliza si impreuna </p>
+		<p>Exemplu:</p>
+		<pre>&ltvideo width="x" height="y" autoplay muted></pre>
+		<h1>Format video--tipMedia</h1>
+		<img src="format.png" style="height:30vh;margin-left: auto;margin-right: auto;">
+</fieldset>	
+
+
+<fieldset id="tabele">
+
+			<legend><h2>Tabele</h2></legend>
+			<p>Etichete de tabel HTML</p>
+<p><ul>
+		<li> &lttable> Definește un tabel</li>
+			<li> &ltth> Definește o celulă antet într-un tabel</li>
+				<li>&lttr> Definește un rând într-un tabel</li>
+					<li>&lttd> Definește o celulă dintr-un tabel</li>
+						<li> &ltcaption> Definește o legenda de tabel</li>
+							<li> &ltcolgroup> Specifică un grup de una sau mai multe coloane într-un tabel pentru formatare</li>
+								<li> &ltcol> Specifică proprietățile coloanei pentru fiecare coloană dintr-un element  &ltcolgroup></li>
+									<li> &ltthead> Grupează conținutul antetului într-un tabel</li>
+										<li> &lttbody> Grupează conținutul corpului într-un tabel</li>
+											<li> &lttfoot> Grupează conținutul subsolului într-un tabel</li>
+	</ul>
+</p>
+<p>Exemplu:</p>
+<table>
+	<tr>
+	  <th>Nume 1</th>
+	  <th>Nume 2</th>
+	  <th>Nume 3</th>
+	</tr>
+	<tr>
+	  <td>Adresa 1</td>
+	  <td>Adresa 2</td>
+	  <td>Adresa 3</td>
+	</tr>
+	<tr>
+	  <td>Varsta 1</td>
+	  <td>Varsta 2</td>
+	  <td>Varsta 3</td>
+	</tr>
+  </table>
+  <p>Cod:</p>
+  <pre>
+	&lttable>
+    &lttr>
+      &ltth>Nume 1&lt/th>
+      &ltth>Nume 2&lt/th>
+      &ltth>Nume 3&lt/th>
+    &lt/tr>
+    &lttr>
+      &lttd>Adresa 1&lt/td>
+      &lttd>Adresa 2&lt/td>
+      &lttd>Adresa 3&lt/td>
+    &lt/tr>
+    &lttr>
+      &lttd>Varsta 1&lt/td>
+      &lttd>Varsta 2&lt/td>
+      &lttd>Varsta 3&lt/td>
+    &lt/tr>
+  &lt/table>
+
+
+
+  </pre>
+
+</fieldset>
+
+<fieldset id="css">
+	<legend><h2>CSS</h2></legend>
+	<p>CSS vine de la Cascading Style Sheets(foi de stil în cascadă).</p>
+	<p>CSS poate fi adăugat documentelor HTML în 3 moduri:</p>
+		<ul>
+		<li>Inline - prin utilizarea atributului de stil în interiorul elementelor HTML</li>
+					<pre>&ltp style="color:blue"></pre>
+			<li>Intern - prin utilizarea unui element &ltstyle> în secțiunea &lthead></li>
+						<pre>&lt!DOCTYPE html>
+&lthtml>
+&lthead>
+&ltstyle>
+p    {color: blue;}
+&lt/style>
+&lt/head>
+&ltbody>
+							
+&ltp>paragraf.&lt/p>
+&lt/html>
+</pre>
+
+				<li>Extern - prin utilizarea unui element &ltlink> pentru a conecta la un fișier CSS extern</li>
+		</ul>
+
+	<img src="HTML/prop.jpg" style="width:80%;margin-left: auto;margin-right: auto;">
+	<p>Penrtu a selecta toate elementele din pagină:</p>
+	<pre>&ltstyle>
+*{
+	color: blue;
+}
+
+&ltstyle></pre>
+<p>Codul de mai sus conferă tuturor elementelor din pagină culoarea blue(albastru)</p>7
+
+<p>Pentru a selecta 2 sau mai multe elemente:</p>
+<pre>
+	&lt!DOCTYPE html>
+	&lthtml>
+	&lthead>
+	&ltstyle>
+	p,h1   {color: blue;}
+	&lt/style>
+	&lt/head>
+	&ltbody>
+	&lth1> Titlu1&lt/h1>							
+	&ltp>paragraf.&lt/p>
+	&lt/html>
+</pre>
+
+<p>Lista completă cu toate proprietățile si valorile <div class="box"><a href="https://bista.sites.dmi.unipg.it/didattica/tecnologie-web/utility/proprieta_CSS/proprieta-CSS.pdf">Aici</a></div></p>
+<br><br><p>Sursa: https://bista.sites.dmi.unipg.it/didattica/tecnologie-web/utility/proprieta_CSS/</p>
+</fieldset>
+
+<fieldset id="claseSiIdUri">
+	<legend><h2>Clase si id-uri</h2></legend>
+	<p>Cum se utilizează clasele:</p>
+	<pre>
+		&lt!DOCTYPE html>
+&lthtml>
+&lthead>
+&ltstyle>
+.blue{color: blue;
+}
+&lt/style>
+&lt/head>
+&ltbody>
+<br>
+<mark>&ltdiv class="blue"></mark>					
+&ltp>paragraf.&lt/p>
+<mark>&lt/div></mark>
+&lt/body>
+&lt/html>
+	</pre>
+	<pre>
+		&lt!DOCTYPE html>
+&lthtml>
+&lthead>
+&ltstyle>
+.blue{color: blue;
+}
+&lt/style>
+&lt/head>
+&ltbody>
+<br>							
+&ltp <mark>class="blue"</mark>>paragraf.&lt/p>
+<br>
+&lt/body>
+&lt/html>
+	</pre>
+<p>Cum se utilizează id-urile:</p>
+<pre>
+&lt!DOCTYPE html>
+&lthtml>
+&lthead>
+&ltstyle>
+#blue{color: blue;
+}
+&lt/style>
+&lt/head>
+&ltbody>
+<br>					
+&ltp <mark>id="blue"</mark>>paragraf.&lt/p>
+&lt/body>
+&lt/html>
+</pre>
+<p>Id-urile se mai pot folosi pentru meniurile din cadrul unei pagini</p>
+<pre>
+	&lt!DOCTYPE html>
+&lthtml>
+&lthead>
+<br>
+&lt/head>
+&ltbody>
+<br>
+&lta href="#bookmark1">Capitolul 1&lt/a>
+<br>
+<br>
+&lth1 id="bookmark1">Capitolul 1&lt/h1>
+&lt/body>
+&lt/html>
+</pre>
+
+</fieldset>
+
+<fieldset id="formulare">
+	<legend><h2>Formulare</h2></legend>
+	<p>Un formular HTML este folosit pentru a colecta informațiile utilizatorului. Intrarea utilizatorului este cel mai adesea trimisă către un server pentru procesare.</p>
+			<pre>
+&ltform>
+.
+form elements
+.
+&lt/form>
+
+</pre>
+
+<p>Diferite tipuri de intrare</p>
+<ul></ul>
+<pre>&ltinput type="<i>tipdeintrare</i>"></pre><br>
+<li>button<input type="button"></li>
+<li>checkbox <input type="checkbox"><br></li>
+<li> color <input type="color"></p><br></li>
+<li> date <input type="date"></p><br></li>
+<li> datetime-local <input type="datetime-local"></p><br></li>
+<li> email <input type="email"></p><br></li>
+			<li> file <input type="file"></p><br></li>
+			<li> hidden <input type="hidden"></p><br></li>
+			<li> image <input type="image"></p><br></li>
+			<li> month <input type="month"></p><br></li>
+			<li> number <input type="number"></p><br></li>
+			<li> password <input type="password"></p><br></li>
+			<li> radio <input type="radio"></p><br></li>
+			<li> range <input type="range"></p><br></li>
+			<li> reset <input type="reset"></p><br></li>
+			<li> search <input type="search"></p><br></li>
+			<li> submit <input type="submit"></p><br></li>
+			<li> tel <input type="tel"></p><br></li>
+			<li> text <input type="text"></p><br></li>
+			<li> time <input type="time"></p><br></li>
+			<li> url <input type="url"></p><br></li>
+			<li> week <input type="week"></p><br></li>
+</ul>
+	<p>Exemplu de formular(cel care se află in această pagină)</p>
+	<iframe src="formular.html" frameborder="0" style="width:80%; height: 100vh"></iframe>
+	<p>Cod:</p>
+	<pre>&lt!DOCTYPE html>
+		&lthtml>
+		&lthead>
+				&lttitle>Formular&lt/title>
+				&ltstyle>
+				body{
+					color: white;
+					background-color: rgb(4, 4, 24);
+				}
+				
+				input{
+					color: white;
+					border: 1px solid white;
+					background-color:rgb(17, 17, 53)
+				}
+				
+				textarea{
+						color: white;
+						border: 1px solid white;
+						background-color:rgb(17, 17, 53)
+					}
+				&lt/style>
+			&lt/head>
+			&ltbody>
+				&ltform >
+					&ltfieldset>
+						&ltlegend>&lth1>Formular contact&lt/h1>&lt/legend>
+						&ltlabel for="nume" id="nume">Nume:&lt/label>
+						&ltinput type="text" id="nume" name="nume">
+						&ltbr>
+						&ltbr>
+						&ltlabel for="prenume" id="prenume">Prenume:&lt/label>
+						&ltinput type="text" id="prenume" name="prenume">
+						&ltbr>
+						&ltbr>
+						&ltlabel for="email">Email:&lt/label>
+						&ltinput type="email" id="email" name="email">
+						&ltbr>
+						&ltbr>
+						&ltlabel for="nr">Numar de telefon&lt/label>
+						&ltinput type="tel" id="phone" name="phone" >
+						&ltbr>
+						&ltbr>
+						&ltlabel for="data">Data nasterii*&lt/label>
+						&ltinput type="date" id="data" name="data">
+						&ltp>*m=luna,d=ziua,y=anul&lt/p>
+						&ltp>Doriti sa fiti contactat prin:&lt/p>
+						&ltinput type="radio" name="tel">
+						&ltlabel for="tel">Telefon&lt/label>
+						&ltbr>
+						&ltinput type="radio" name="email">
+						&ltlabel for="email">Email&lt/label>
+						&ltbr>
+						&ltbr>
+						&ltlabel for="desc">Descriere (motivul pentru care doriti sa fiti contactat sau pentru care doriti sa luati legatura cu noi):&lt/label>
+						&ltbr>
+						&lttextarea cols="60" rows="10" name="desc">&lt/textarea>
+						&ltbr>
+						&ltbr>
+						&ltinput type="submit" id="submit" id="submit">
+						&ltinput type="reset" id="reset" id="reset">
+					&lt/fieldset>
+				&lt/form>
+			&lt/body>
+		&lt/html>
+	</pre>
+
+</fieldset>
+
+
+<!-- Exemple ******************************************************************************** -->
+
+<fieldset   id="e1">
+<legend><h2>Exemplu practic</h2></legend>
+<!DOCTYPE html>
+<html>
+<body>
+<p>Normal</p>
+<p style="color:red;">Rosu</p>
+<p style="color:blue;">Albastru</p>
+<p style="font-size:50px;">Mare</p>
+</body>
+</html>
+</fieldset>
+
+<fieldset  >
+<legend><h2>Cod exemplu practic</h2></legend>
+<p><pre>
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;body>
+
+&lt;p>Normal&lt;/p>
+&lt;p style="color:red;">Rosu&lt;/p>
+&lt;p style="color:blue;">Albastru&lt;/p>
+&lt;p style="font-size:50px;">Mare&lt;/p>
+
+&lt;/body>
+&lt;/html>
+</pre>
+</p>
+
+
+
+
+<fieldset id="e2"  >
+<legend><h2>Alt exemplu practic</h2></legend>
+<iframe src="sistem.html" style="width: 100% ; height: 100vh"></iframe>
+</fieldset>
+
+<fieldset  >
+<legend><h2>Cod exemplu practic</h2></legend>
+<p><pre>
+&lt;HTML>
+&lt;HEAD>
+&lt;TITLE>SISTEMUL PERIODIC AL ELEMENTELOR&lt;/TITLE>
+&lt;/HEAD>
+&lt;BODY>
+&lt;H2>Sistemul periodic al elementelor (Tabelul periodic al lui Mendeleev).&lt;/H2>
+&lt;table cellpadding="6" cellspacing="2" align="center">
+&lt;TR>
+&lt;TD BGCOLOR=#FFAAFF align="center" title="Hidrogen">H&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD BGCOLOR=#00FFFF align="center" title="Heliu">He&lt;/TD>
+&lt;/TR>
+&lt;TR>
+&lt;TD BGCOLOR=#00FF00 align="center" title="Litiu">Li&lt;/TD>
+&lt;TD BGCOLOR=#CCCCC align="center" title="Beriliu">Be&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD BGCOLOR=#0099FF align="center" title="Bor">B&lt;/TD>
+&lt;TD BGCOLOR=#FFAAFF align="center" title="Carbon">C&lt;/TD>
+&lt;TD BGCOLOR=#FFAAFF align="center" title="Azot">N&lt;/TD>
+&lt;TD BGCOLOR=#FFAAFF align="center" title="Oxigen">O&lt;/TD>
+&lt;TD BGCOLOR=#AABB22 align="center" title="Fluor">F&lt;/TD>
+&lt;TD BGCOLOR=#00FFFF align="center" title="Neon">Ne&lt;/TD>
+&lt;/TR>
+&lt;TR>
+&lt;TD BGCOLOR=#00FF00 align="center" title="Sodiu">Na&lt;/TD>
+&lt;TD BGCOLOR=#CCCCCC align="center" title="Magneziu">Mg&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD BGCOLOR=#FFBBBB align="center" title="Aluminiu">Al&lt;/TD>
+&lt;TD BGCOLOR=#0099FF align="center" title="Siliciu">Si&lt;/TD>
+&lt;TD BGCOLOR=#FFAAFF align="center" title="Fosfor">P&lt;/TD>
+&lt;TD BGCOLOR=#FFAAFF align="center" title="Sulf">S&lt;/TD>
+&lt;TD BGCOLOR=#AABB22 align="center" title="Clor">Cl&lt;/TD>
+&lt;TD BGCOLOR=#00FFFF align="center" title="Argon">Ar&lt;/TD>
+&lt;/TR>
+&lt;TR>&lt;TD BGCOLOR=#00FF00 align="center" title="Potasiu">K&lt;/TD>
+&lt;TD BGCOLOR=#CCCCCC align="center" title="Calciu">Ca&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Scandiu">Sc&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Titan">Ti&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Vanadiu">V&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Crom">Cr&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Mangan">Mn&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Fier">Fe&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Cobalt">Co&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Nichel">Ni&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Cupru">Cu&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Zinc">Zn&lt;/TD>
+&lt;TD BGCOLOR=#FFBBBB align="center" title="Galiu">Ga&lt;/TD>
+&lt;TD BGCOLOR=#0099FF align="center" title="Germaniu">Ge&lt;/TD>
+&lt;TD BGCOLOR=#0099FF align="center" title="Arsenic">As&lt;/TD>
+&lt;TD BGCOLOR=#FFAAFF align="center" title="Seleniu">Se&lt;/TD>
+&lt;TD BGCOLOR=#AABB22 align="center" title="Brom">Br&lt;/TD>
+&lt;TD BGCOLOR=#00FFFF align="center" title="Kripton">Kr&lt;/TD>
+&lt;/TR>
+&lt;TR>
+&lt;TD BGCOLOR=#00FF00 align="center" title="Rubidiu">Rb&lt;/TD> 
+&lt;TD BGCOLOR=#CCCCCC align="center" title="Stronțiu">Sr&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Ytriu">Y&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Zirconiu">Zr&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Niobiu">Nb&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Molibden">Mo&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Technețiu">Tc&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Ruteniu">Ru&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Rodiu">Rh&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Paladiu">Pd&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Argint">Ag&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Cadmiu">Cd&lt;/TD>
+&lt;TD BGCOLOR=#FFBBBB align="center" title="Indiu">In&lt;/TD>
+&lt;TD BGCOLOR=#FFBBBB align="center" title="Staniu">Sn&lt;/TD>
+&lt;TD BGCOLOR=#0099FF align="center" title="Antimoniu">Sb&lt;/TD>
+&lt;TD BGCOLOR=#0099FF align="center" title="Telur">Te&lt;/TD>
+&lt;TD BGCOLOR=#AABB22 align="center" title="Iod">I&lt;/TD>
+&lt;TD BGCOLOR=#00FFFF align="center" title="Xenon">Xe&lt;/TD>
+&lt;/TR>
+&lt;TR>
+&lt;TD BGCOLOR=#00FF00 align="center" title="Cesiu">Cs&lt;/TD>
+&lt;TD BGCOLOR=#CCCCCC align="center" title="Bariu">Ba&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Hafniu">Hf&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Tantal">Ta&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Wolfram">W&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Reniu">Re&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Osmiu">Os&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Iridiu">Ir&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Platina">Pt&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Aur">Au&lt;/TD>
+&lt;TD BGCOLOR=#00CCCC align="center" title="Mercur">Hg&lt;/TD>
+&lt;TD BGCOLOR=#FFBBBB align="center" title="Taliu">Tl&lt;/TD>
+&lt;TD BGCOLOR=#FFBBBB align="center" title="Plumb">Pb&lt;/TD>
+&lt;TD BGCOLOR=#FFBBBB align="center" title="Bismut">Bi&lt;/TD>
+&lt;TD BGCOLOR=#0099FF align="center" title="Poloniu">Po&lt;/TD>
+&lt;TD BGCOLOR=#AABB22 align="center" title="Astatiniu">At&lt;/TD>
+&lt;TD BGCOLOR=#00FFFF align="center" title="Radon">Rn&lt;/TD>
+&lt;/TR>
+&lt;TR>
+&lt;TD BGCOLOR=#00FF00 align="center" title="Franciu">Fr&lt;/TD>
+&lt;TD BGCOLOR=#CCCCCC align="center" title="Radiu">Ra&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;/TR>
+&lt;TR>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD BGCOLOR=#EEEE00 align="center" title="Lantan">La&lt;/TD>
+&lt;TD BGCOLOR=#EEEE00 align="center" title="Ceriu">Ce&lt;/TD>
+&lt;TD BGCOLOR=#EEEE00 align="center" title="Praseodim">Pr&lt;/TD>
+&lt;TD BGCOLOR=#EEEE00 align="center" title="Neodim">Nd&lt;/TD>
+&lt;TD BGCOLOR=#EEEE00 align="center" title="Promețiu">Pm&lt;/TD>
+&lt;TD BGCOLOR=#EEEE00 align="center" title="Samariu">Sm&lt;/TD>
+&lt;TD BGCOLOR=#EEEE00 align="center" title="Europiu">Eu&lt;/TD>
+&lt;TD BGCOLOR=#EEEE00 align="center" title="Gadoliniu">Gd&lt;/TD>
+&lt;TD BGCOLOR=#EEEE00 align="center" title="Terbiu">Tb&lt;/TD>
+&lt;TD BGCOLOR=#EEEE00 align="center" title="Disprosiu">Dy&lt;/TD>
+&lt;TD BGCOLOR=#EEEE00 align="center" title="Holmiu">Ho&lt;/TD>
+&lt;TD BGCOLOR=#EEEE00 align="center" title="Erbiu">Er&lt;/TD>
+&lt;TD BGCOLOR=#EEEE00 align="center" title="Tuliu">Tm&lt;/TD>
+&lt;TD BGCOLOR=#EEEE00 align="center" title="Yterbiu">Yb&lt;/TD>
+&lt;TD BGCOLOR=#EEEE00 align="center" title="Lutețiu">Lu&lt;/TD>
+&lt;/TR>
+&lt;TR>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD>&lt;/TD>
+&lt;TD BGCOLOR=#00CC44 align="center" title="Actiniu">Ac&lt;/TD>
+&lt;TD BGCOLOR=#00CC44 align="center" title="Toriu">Th&lt;/TD>
+&lt;TD BGCOLOR=#00CC44 align="center" title="Protactiniu">Pa&lt;/TD>
+&lt;TD BGCOLOR=#00CC44 align="center" title="Uraniu">U&lt;/TD>
+&lt;TD BGCOLOR=#00CC44 align="center" title="Neptuniu">Np&lt;/TD>
+&lt;TD BGCOLOR=#00CC44 align="center" title="Plutoniu">Pu&lt;/TD>
+&lt;TD BGCOLOR=#00CC44 align="center" title="Americiu">Am&lt;/TD>
+&lt;TD BGCOLOR=#00CC44 align="center" title="Curiu">Cm&lt;/TD>
+&lt;TD BGCOLOR=#00CC44 align="center" name="Berkeliu">Bk&lt;/TD>
+&lt;TD BGCOLOR=#00CC44 align="center" name="Californiu">Cf&lt;/TD>
+&lt;TD BGCOLOR=#00CC44 align="center" name="Einsteiniu">Es&lt;/TD>
+&lt;TD BGCOLOR=#00CC44 align="center" name="Fermiu">Fm&lt;/TD>
+&lt;TD BGCOLOR=#00CC44 align="center" name="Mendeleeviu">Md&lt;/TD>
+&lt;TD BGCOLOR=#00CC44 align="center" title="Nobeliu">No&lt;/TD>
+&lt;TD BGCOLOR=#00CC44 align="center" title="Lawrențiu">Lr&lt;/TD>
+&lt;/TR>
+&lt;/TABLE>&lt;BR>
+&lt;TABLE align="center">
+&lt;TR>
+&lt;TD BGCOLOR=#FFAAFF WIDTH="40">&lt;/TD>&lt;TD>Nemetale&lt;/TD>
+&lt;TD BGCOLOR=#0099FF WIDTH="40">&lt;/TD>&lt;TD>Metaloizi&lt;/TD>
+&lt;/TR>
+&lt;TR>
+&lt;TD BGCOLOR=#00FF00 WIDTH="40">&lt;/TD>&lt;TD>Metale alcaline&lt;/TD>
+&lt;TD BGCOLOR=#AABB22 WIDTH="40">&lt;/TD>&lt;TD>Halogeni&lt;/TD>
+&lt;/TR>
+&lt;TR>
+&lt;TD BGCOLOR=#CCCCC WIDTH="40">&lt;/TD>&lt;TD>Metale alcalino pământoase&lt;/TD>
+&lt;TD BGCOLOR=#00FFFF WIDTH="40">&lt;/TD>&lt;TD>Gaze nobile&lt;/TD>
+&lt;/TR>
+&lt;TR>
+&lt;TD BGCOLOR=#00CCCC WIDTH="40">&lt;/TD>&lt;TD>Metale de tranziție&lt;/TD>
+&lt;TD BGCOLOR=#EEEE00 WIDTH="40">&lt;/TD>&lt;TD>Lantanide&lt;/TD>
+&lt;/TR>
+&lt;TR>
+&lt;TD BGCOLOR=#FFBBBB WIDTH="40">&lt;/TD>&lt;TD>Metale de post-tranziție&lt;/TD>
+&lt;TD BGCOLOR=#00CC44 WIDTH="40">&lt;/TD>&lt;TD>Actinide&lt;/TD>
+&lt;/TR>
+&lt;/TABLE>
+&lt;/BODY>
+&lt;/HTML>
+
+</pre>
+</fieldset>
+
+
+
+
+</body>
+</html>

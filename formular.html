@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formular</title>
+        <style>
+            body{
+                color: white;
+                background-color: rgb(4, 4, 24);
+            }
+
+            input{
+                color: white;
+                border: 1px solid white;
+                background-color:rgb(17, 17, 53)
+            }
+
+            textarea{
+                color: white;
+                border: 1px solid white;
+                background-color:rgb(17, 17, 53)
+            }
+        </style>
+    </head>
+    <body>
+        <form >
+            <fieldset>
+                <legend><h1>Formular contact</h1></legend>
+                <label for="nume" id="nume">Nume:</label>
+                <input type="text" id="nume" name="nume">
+                <br>
+                <br>
+                <label for="prenume" id="prenume">Prenume:</label>
+                <input type="text" id="prenume" name="prenume">
+                <br>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <br>
+                <br>
+                <label for="nr">Numar de telefon</label>
+                <input type="tel" id="phone" name="phone" >
+                <br>
+                <br>
+                <label for="data">Data nasterii*</label>
+                <input type="date" id="data" name="data">
+                <p>*m=luna,d=ziua,y=anul</p>
+                <p>Doriti sa fiti contactat prin:</p>
+                <input type="radio" name="tel">
+                <label for="tel">Telefon</label>
+                <br>
+                <input type="radio" name="email">
+                <label for="email">Email</label>
+                <br>
+                <br>
+                <label for="desc">Descriere (motivul pentru care doriti sa fiti contactat sau pentru care doriti sa luati legatura cu noi):</label>
+                <br>
+                <textarea cols="60" rows="10" name="desc"></textarea>
+                <br>
+                <br>
+                <input type="submit" id="submit" id="submit">
+                <input type="reset" id="reset" id="reset">
+            </fieldset>
+        </form>
+    </body>
+</html>
