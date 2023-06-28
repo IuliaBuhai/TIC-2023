@@ -1,75 +1,82 @@
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Virtual Assistant</title>
   <style>
-    body{
-      background-color:rgb(6, 6, 21) ;
-    }
     /* CSS styles for the virtual assistant interface */
+    body {
+      background-color: rgb(6, 6, 21);
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
     .chat-window {
       width: 300px;
       height: 400px;
-      border: 1px solid #050000;
+      border: 5px solid #050000;
       overflow-y: scroll;
       padding: 10px;
       background-color: #0d0a18;
-      margin-left: auto;
-      margin-right: auto;
-      border-radius: 5px;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 5px 8px 7px black;
     }
-  
+
     .user-message {
       color: rgb(255, 255, 255);
       border: 2px solid rgb(58, 58, 105);
       background-color: rgb(16, 16, 30);
       border-radius: 10px;
       float: right;
+      margin-bottom: 10px;
+      padding: 5px;
     }
-  
+
     .assistant-message {
       color: rgb(6, 85, 153);
       border: 2px solid rgb(58, 58, 105);
       background-color: rgb(139, 139, 168);
       border-radius: 10px;
       float: left;
+      margin-bottom: 10px;
+      padding: 5px;
     }
-    .aliniereMijloc{
-      margin-left: 40%;
-      margin-right: auto;
+
+    .aliniereMijloc {
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <img src="sigla.png"  style="height:75px; float:left;position:fixed;z-index: 3;"> 
-
-  <h1 class="aliniereMijloc" style="color:white">Asistent Virtual</h1>
-  
+  <img src="sigla.png" style="height: 75px; float: left; position: fixed; z-index: 3;">
+  <h1 class="aliniereMijloc" style="color: white;">Asistent Virtual</h1>
   <div class="chat-window" id="chatWindow">
     <!-- Chat messages will be displayed here -->
   </div>
   <div class="aliniereMijloc">
-  <input type="text" id="userInput" placeholder="Scrieți mesajul dvs." >
-  <button onclick="sendMessage()">Trimite</button>
+    <input type="text" id="userInput" placeholder="Scrieți mesajul dvs." style="background-color:#0d0a18;color:rgb(175, 199, 220)">
+    <button onclick="sendMessage()" style="background-color:#0d0a18;color:rgb(175, 199, 220)">Trimite</button>
   </div>
   <script>
     function sendMessage() {
       var userInput = document.getElementById('userInput');
       var chatWindow = document.getElementById('chatWindow');
-      
+
       var userMessage = document.createElement('p');
       userMessage.innerHTML = '<strong>Dvs:</strong> ' + userInput.value;
       userMessage.classList.add('user-message');
       chatWindow.appendChild(userMessage);
-      
+
       var assistantMessage = document.createElement('p');
       assistantMessage.innerHTML = '<strong>Asistent Virtual:</strong> ' + generateResponse(userInput.value);
       assistantMessage.classList.add('assistant-message');
       chatWindow.appendChild(assistantMessage);
-      
+
       userInput.value = '';
     }
-    
+
     function generateResponse(userInput) {
       userInput = userInput.toLowerCase();
 
@@ -109,9 +116,150 @@
   return 'Pentru a centeriza un element în CSS, se pot folosi diferite tehnici, cum ar fi utilizarea proprietății "margin" cu valorile "auto", utilizarea flexbox sau utiliz';
  }else if (userInput.includes('cum se centerizează un element')) {
   return 'Pentru a centeriza un element în CSS, se pot folosi diferite tehnici, cum ar fi utilizarea proprietății "margin" cu valorile "auto", utilizarea flexbox sau utiliz';
-    }
-  else
-  return'Nu am inteles intrebarea, va rog sa reformulati'
+} else if (userInput.includes('care sunt limbajele de programare populare') || userInput.includes('limbajele de programare cele mai populare') || userInput.includes('limbajele de programare populare')) {
+  return 'Printre limbajele de programare populare se numără JavaScript, Python, Java, C++, C#, PHP și altele.';
+} else if (userInput.includes('ce este html')) {
+  return 'HTML (HyperText Markup Language) este limbajul standard pentru construirea paginilor web. Este utilizat pentru a structura și formata conținutul paginilor web.';
+} else if (userInput.includes('ce este css')) {
+  return 'CSS (Cascading Style Sheets) este limbajul folosit pentru stilizarea și formatarea paginilor web create cu HTML. Cu ajutorul CSS, puteți controla aspectul și prezentarea elementelor HTML.';
+} else if (userInput.includes('cum se adaugă un stil css într-un document html') || userInput.includes('cum se adaugă un stil css î html') || userInput.includes('cum se adaugă un stil css într-un document')) {
+  return 'Pentru a adăuga stil CSS într-un document HTML, puteți folosi un element <link> cu atributul "rel" setat la "stylesheet" și atributul "href" setat la calea către fișierul CSS.';
+} else if (userInput.includes('cum se selectează un element HTML în CSS')) {
+  return 'Pentru a selecta un element HTML în CSS, utilizați selectori CSS, cum ar fi selectori de etichete, selectori de clasă, selectori de ID sau selectori de atribut.';
+} else if (userInput.includes('cum se adaugă o imagine în html')) {
+  return 'Pentru a adăuga o imagine într-un document HTML, se utilizează tagul <img> și atributul "src" pentru a specifica sursa (URL sau calea locală) a imaginii.';
+} else if (userInput.includes('cum se adaugă o imagine')) {
+  return 'Pentru a adăuga o imagine într-un document HTML, se utilizează tagul <img> și atributul "src" pentru a specifica sursa (URL sau calea locală) a imaginii.';
+} else if (userInput.includes('cum se aplică stiluri css direct pe un element html')) {
+  return 'Stilurile CSS pot fi aplicate direct pe un element HTML folosind atributul "style" al elementului respectiv.';
+} else if (userInput.includes('care este diferența dintre selectorii de clasă și selectorii de ID în css')) {
+  return 'Un selector de clasă (.) poate fi utilizat pentru a selecta mai multe elemente cu aceeași clasă, în timp ce un selector de ID (#) selectează un singur element cu un ID unic.';
+} else if (userInput.includes('cum se aplică un stil css doar pe un anumit tip de element în cadrul unui selector de clasă')) {
+  return 'Puteți combina selectorul de clasă cu selectorul de etichetă pentru a aplica stiluri CSS doar pe anumite elemente cu o clasă specificată.';
+} else if (userInput.includes('cum se centrează un element în css') ){
+  return 'Pentru a centeriza un element în CSS, se pot folosi diferite tehnici, cum ar fi utilizarea proprietății "margin" cu valorile "auto", utilizarea flexbox sau alte metode specifice.';
+} else if (userInput.includes('cum se centrează') ){
+  return 'Pentru a centeriza un element în CSS, se pot folosi diferite tehnici, cum ar fi utilizarea proprietății "margin" cu valorile "auto", utilizarea flexbox sau alte metode specifice.';
+} else if (userInput.includes('cum se centrează un element') ){
+  return 'Pentru a centeriza un element în CSS, se pot folosi diferite tehnici, cum ar fi utilizarea proprietății "margin" cu valorile "auto", utilizarea flexbox sau alte metode specifice.';
+} else if (userInput.includes('cum se centrează în css') ){
+  return 'Pentru a centeriza un element în CSS, se pot folosi diferite tehnici, cum ar fi utilizarea proprietății "margin" cu valorile "auto", utilizarea flexbox sau alte metode specifice.';
+} else if (userInput.includes('care este structura de bază a unui document HTML')) {
+    return 'Structura de bază a unui document HTML constă în tag-urile &lt html>, &lt head> și &lt body>.';
+  } else if (userInput.includes('Cum se definește un titlu pentru o pagină HTML?')) {
+    return 'Un titlu pentru o pagină HTML se definește folosind tag-ul <title> în cadrul tag-ului <head>.';
+  } else if (userInput.includes('Care este scopul tag-ului <head> într-un document HTML?')) {
+    return 'Tag-ul <head> conține informații despre document, cum ar fi titlul, stilurile CSS și meta-informațiile.';
+  } else if (userInput.includes('Care sunt diferențele dintre tag-urile <div> și <span>?')) {
+    return '<div> este un container generic utilizat pentru gruparea și stilizarea elementelor, în timp ce <span> este utilizat pentru stilizarea textului în interiorul unui element.';
+  } else if (userInput.includes('Cum se creează o listă ordonată și o listă neordonată în HTML?')) {
+    return 'O listă ordonată se creează folosind tag-ul <ol>, iar o listă neordonată folosește tag-ul <ul>.';
+  } else if (userInput.includes('Ce este un hyperlink și cum se adaugă unul într-un document HTML?')) {
+    return 'Un hyperlink se adaugă folosind tag-ul <a>, iar adresa URL se specifică în atributul href.';
+  } else if (userInput.includes('Cum se inserează o imagine într-un document HTML?')) {
+    return 'O imagine se inserează într-un document HTML folosind tag-ul <img>, iar sursa imaginii se specifică în atributul src.';
+  } else if (userInput.includes('Ce sunt tabelele și cum se creează una în HTML?')) {
+    return 'Tabelele în HTML se creează utilizând tag-urile <table>, <tr> și <td>.';
+  } else if (userInput.includes('formular HTML')) {
+    return 'Un formular HTML se creează folosind tag-ul <form>, iar elementele precum câmpuri de text, casete de selectare și butoane se adaugă cu ajutorul tag-urilor corespunzătoare.';
+  } else if (userInput.includes('Ce este CSS și la ce este folosit?')) {
+    return 'CSS este limbajul utilizat pentru stilizarea și formatarea elementelor HTML.';
+  } else if (userInput.includes('Cum se aplică stiluri CSS unui element HTML?')) {
+    return 'Stilurile CSS se aplică unui element HTML utilizând selecționatori și proprietăți CSS.';
+  } else if(userInput.includes('cum se aplica css')){
+    return 'Stilurile CSS se aplică unui element HTML utilizând selecționatori și proprietăți CSS.'
+  } else if(userInput.includes('listă ordonată')){
+    return 'Un element <ol> (ordered list) este folosit în HTML pentru a crea o listă ordonată. Acesta definește un grup de elemente <li> (list item) care sunt afișate într-o anumită ordine și sunt numerotate implicit. Elementul <ol> poate fi utilizat pentru a crea liste numerotate sau liste cu alte tipuri de numerotare (de exemplu, litere sau simboluri).';
+  } else if(userInput.includes('listă neordonată')){
+    return 'Un element <ul> (unordered list) este folosit în HTML pentru a crea o listă neordonată. Acesta definește un grup de elemente <li> (list item) care sunt afișate fără o ordine specifică și nu sunt numerotate';
+    }else if(userInput.includes('formular')){
+        return 'Un formular HTML se creează folosind tag-ul <form>, iar elementele precum câmpuri de text, casete de selectare și butoane se adaugă cu ajutorul tag-urilor corespunzătoare.'
+    }else if(userInput.includes('limbaje de programare populare')){
+    return 'Printre limbajele de programare populare se numără JavaScript, Python, Java, C++, C#, PHP și altele.';
+    }else if(userInput.includes('limbaje populare')){
+        return 'Printre limbajele de programare populare se numără JavaScript, Python, Java, C++, C#, PHP și altele.';
+    }else if(userInput.includes('folosite limbaje')){
+        return 'Printre limbajele de programare populare se numără JavaScript, Python, Java, C++, C#, PHP și altele.'
+    } else if (userInput.includes('cum se adauga un stil css intr-un document html')) {
+  return 'Pentru a adauga stil CSS intr-un document HTML, puteti folosi un element <link> cu atributul "rel" setat la "stylesheet" si atributul "href" setat la calea catre fisierul CSS.';
+} else if (userInput.includes('cum se adauga un stil css i html')) {
+  return 'Pentru a adauga stil CSS intr-un document HTML, puteti folosi un element <link> cu atributul "rel" setat la "stylesheet" si atributul "href" setat la calea catre fisierul CSS.';
+} else if (userInput.includes('cum se adauga un stil css intr-un document')) {
+  return 'Pentru a adauga stil CSS intr-un document HTML, puteti folosi un element <link> cu atributul "rel" setat la "stylesheet" si atributul "href" setat la calea catre fisierul CSS.';
+
+} else if (userInput.includes('cum se selecteaza un element HTML in CSS')) {
+  return 'Pentru a selecta un element HTML in CSS, utilizati selectori CSS, cum ar fi selectori de etichete, selectori de clasa, selectori de ID sau selectori de atribut.';
+} else if (userInput.includes('cum se adauga o imagine in html')) {
+  return 'Pentru a adauga o imagine intr-un document HTML, se utilizeaza tagul <img> si atributul "src" pentru a specifica sursa (URL sau calea locala) a imaginii.';
+
+} else if (userInput.includes('cum se aplica stiluri css direct pe un element html')) {
+  return 'Stilurile CSS pot fi aplicate direct pe un element HTML folosind atributul "style" al elementului respectiv.';
+} else if (userInput.includes('care este diferenta dintre selectorii de clasa si selectorii de ID in css')) {
+  return 'Un selector de clasa (.) poate fi utilizat pentru a selecta mai multe elemente cu aceeasi clasa, in timp ce un selector de ID (#) selecteaza un singur element cu un ID unic.';
+} else if (userInput.includes('cum se aplica un stil css doar pe un anumit tip de element in cadrul unui selector de clasa')) {
+  return 'Puteti combina selectorul de clasa cu selectorul de eticheta pentru a aplica stiluri CSS doar pe anumite elemente cu o clasa specificata.';
+} else if (userInput.includes('cum se centreaza un element in css')) {
+  return 'Pentru a centeriza un element in CSS, se pot folosi diferite tehnici, cum ar fi utilizarea proprietatii "margin" cu valorile "auto", utilizarea flexbox sau utiliz';
+ }else if (userInput.includes('cum se centerizeaza un element')) {
+  return 'Pentru a centeriza un element in CSS, se pot folosi diferite tehnici, cum ar fi utilizarea proprietatii "margin" cu valorile "auto", utilizarea flexbox sau utiliz';
+} else if (userInput.includes('care sunt limbajele de programare populare') || userInput.includes('limbajele de programare cele mai populare') || userInput.includes('limbajele de programare populare')) {
+  return 'Printre limbajele de programare populare se numara JavaScript, Python, Java, C++, C#, PHP si altele.';
+} else if (userInput.includes('ce este html')) {
+  return 'HTML (HyperText Markup Language) este limbajul standard pentru construirea paginilor web. Este utilizat pentru a structura si formata continutul paginilor web.';
+} else if (userInput.includes('ce este css')) {
+  return 'CSS (Cascading Style Sheets) este limbajul folosit pentru stilizarea si formatarea paginilor web create cu HTML. Cu ajutorul CSS, puteti controla aspectul si prezentarea elementelor HTML.';
+} else if (userInput.includes('cum se adauga un stil css intr-un document html') || userInput.includes('cum se adauga un stil css i html') || userInput.includes('cum se adauga un stil css intr-un document')) {
+  return 'Pentru a adauga stil CSS intr-un document HTML, puteti folosi un element <link> cu atributul "rel" setat la "stylesheet" si atributul "href" setat la calea catre fisierul CSS.';
+} else if (userInput.includes('cum se selecteaza un element HTML in CSS')) {
+  return 'Pentru a selecta un element HTML in CSS, utilizati selectori CSS, cum ar fi selectori de etichete, selectori de clasa, selectori de ID sau selectori de atribut.';
+} else if (userInput.includes('cum se adauga o imagine in html')) {
+  return 'Pentru a adauga o imagine intr-un document HTML, se utilizeaza tagul <img> si atributul "src" pentru a specifica sursa (URL sau calea locala) a imaginii.';
+} else if (userInput.includes('cum se adauga o imagine')) {
+  return 'Pentru a adauga o imagine intr-un document HTML, se utilizeaza tagul <img> si atributul "src" pentru a specifica sursa (URL sau calea locala) a imaginii.';
+} else if (userInput.includes('cum se aplica stiluri css direct pe un element html')) {
+  return 'Stilurile CSS pot fi aplicate direct pe un element HTML folosind atributul "style" al elementului respectiv.';
+} else if (userInput.includes('care este diferenta dintre selectorii de clasa si selectorii de ID in css')) {
+  return 'Un selector de clasa (.) poate fi utilizat pentru a selecta mai multe elemente cu aceeasi clasa, in timp ce un selector de ID (#) selecteaza un singur element cu un ID unic.';
+} else if (userInput.includes('cum se aplica un stil css doar pe un anumit tip de element in cadrul unui selector de clasa')) {
+  return 'Puteti combina selectorul de clasa cu selectorul de eticheta pentru a aplica stiluri CSS doar pe anumite elemente cu o clasa specificata.';
+} else if (userInput.includes('cum se centreaza un element in css') ){
+  return 'Pentru a centeriza un element in CSS, se pot folosi diferite tehnici, cum ar fi utilizarea proprietatii "margin" cu valorile "auto", utilizarea flexbox sau alte metode specifice.';
+} else if (userInput.includes('cum se centreaza') ){
+  return 'Pentru a centeriza un element in CSS, se pot folosi diferite tehnici, cum ar fi utilizarea proprietatii "margin" cu valorile "auto", utilizarea flexbox sau alte metode specifice.';
+} else if (userInput.includes('cum se centreaza un element') ){
+  return 'Pentru a centeriza un element in CSS, se pot folosi diferite tehnici, cum ar fi utilizarea proprietatii "margin" cu valorile "auto", utilizarea flexbox sau alte metode specifice.';
+} else if (userInput.includes('cum se centreaza in css') ){
+  return 'Pentru a centeriza un element in CSS, se pot folosi diferite tehnici, cum ar fi utilizarea proprietatii "margin" cu valorile "auto", utilizarea flexbox sau alte metode specifice.';
+} else if (userInput.includes('care este structura de baza a unui document HTML')) {
+    return 'Structura de baza a unui document HTML consta in tag-urile &lt html>, &lt head> si &lt body>.';
+  } else if (userInput.includes('Cum se defineste un titlu pentru o pagina HTML?')) {
+    return 'Un titlu pentru o pagina HTML se defineste folosind tag-ul <title> in cadrul tag-ului <head>.';
+  } else if (userInput.includes('Care este scopul tag-ului <head> intr-un document HTML?')) {
+    return 'Tag-ul <head> contine informatii despre document, cum ar fi titlul, stilurile CSS si meta-informatiile.';
+  } else if (userInput.includes('Care sunt diferentele dintre tag-urile <div> si <span>?')) {
+    return '<div> este un container generic utilizat pentru gruparea si stilizarea elementelor, in timp ce <span> este utilizat pentru stilizarea textului in interiorul unui element.';
+  } else if (userInput.includes('Cum se creeaza o lista ordonata si o lista neordonata in HTML?')) {
+    return 'O lista ordonata se creeaza folosind tag-ul <ol>, iar o lista neordonata foloseste tag-ul <ul>.';
+  } else if (userInput.includes('Ce este un hyperlink si cum se adauga unul intr-un document HTML?')) {
+    return 'Un hyperlink se adauga folosind tag-ul <a>, iar adresa URL se specifica in atributul href.';
+  } else if (userInput.includes('Cum se insereaza o imagine intr-un document HTML?')) {
+    return 'O imagine se insereaza intr-un document HTML folosind tag-ul <img>, iar sursa imaginii se specifica in atributul src.';
+  } else if (userInput.includes('Ce sunt tabelele si cum se creeaza una in HTML?')) {
+    return 'Tabelele in HTML se creeaza utilizand tag-urile <table>, <tr> si <td>.';
+  } else if (userInput.includes('formular HTML')) {
+    return 'Un formular HTML se creeaza folosind tag-ul <form>, iar elementele precum campuri de text, casete de selectare si butoane se adauga cu ajutorul tag-urilor corespunzatoare.';
+  } else if (userInput.includes('Ce este CSS si la ce este folosit?')) {
+    return 'CSS este limbajul utilizat pentru stilizarea si formatarea elementelor HTML.';
+  } else if (userInput.includes('Cum se aplica stiluri CSS unui element HTML?')) {
+    return 'Stilurile CSS se aplica unui element HTML utilizand selectionatori si proprietati CSS.';
+  } else if(userInput.includes('cum se aplica css')){
+    return 'Stilurile CSS se aplica unui element HTML utilizand selectionatori si proprietati CSS.'
+  } else if(userInput.includes('lista ordonata')){
+    return 'Un element <ol> (ordered list) este folosit in HTML pentru a crea o lista ordonata. Acesta defineste un grup de elemente <li> (list item) care sunt afisate intr-o anumita ordine si sunt numerotate implicit. Elementul <ol> poate fi utilizat pentru a crea liste numerotate sau liste cu alte tipuri de numerotare (de exemplu, litere sau simboluri).';
+  } else if(userInput.includes('lista neordonata')){
+    return 'Un element <ul> (unordered list) este folosit in HTML pentru a crea o lista neordonata. Acesta defineste un grup de elemente <li> (list item) care sunt afisate fara o ordine specifica si nu sunt numerotate';
+    }else { //DIacritice gata noi comeni de aici ----------------------------------------------------------------------------------------
+  return 'Nu am înțeles întrebarea. Vă rog să reformulați sau să adresați o altă întrebare legată de programare HTML și CSS.';}
 }
 
   </script>
