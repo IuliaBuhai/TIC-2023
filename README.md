@@ -26,6 +26,7 @@ Acest site vine în ajutorul elevilor care vor să se pregătească pentru olimp
   <li>posibilitatea de a micșora luminozitatea</li>
 <img src="readme/15.png">
 </ul>
+
 # Realizare proiect
 proiectul a fost realizat în :
 <ul>
